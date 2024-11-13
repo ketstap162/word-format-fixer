@@ -8,9 +8,9 @@ app = FastAPI()
 os.makedirs("uploads", exist_ok=True)
 
 
-@app.post("/upload")
+@app.post("/file-upload")
 async def upload_file(file: UploadFile = File(...), username: str = "none"):
-    """Endpoint to upload file."""
+    """Endpoint to upload `.docx` file."""
 
     file_path = save_uploaded_file(file, username)
 
