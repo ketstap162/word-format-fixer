@@ -35,3 +35,47 @@ async def get_files(username: str):
             files.append({"filename": filename, "file_path": file_path})
 
     return {"files": files}
+
+
+@app.get("/find-mistakes")
+async def create_spec(file_path: str):
+    """Create a JSON file with mistakes and return the new JSON file path."""
+    if not file_path:
+        raise HTTPException(status_code=404, detail="Pass the file path")
+    return create_word_file_mistakes(file_path)
+
+
+@app.get("/get-mistakes")
+async def get_mistake_specification(file_path: str):
+    """Return a JSON data using mistakes file path."""
+    with open(file_path, "r") as file:
+        data = json.load(file)
+
+    return data
+
+
+@app.get("/file-download")
+async def get_file(file_path: str):
+
+    if os.path.exists(file_path):
+        directory, filename = os.path.split(file_path)
+
+        return FileResponse(file_path, media_type="application/octet-stream", filename=filename)
+    else:
+        return {"error": "File not found"}
+    pass
+
+
+@app.post("/file-fix")
+async def fix_file(request: Request):
+    """Pass the JSON mistakes as body to get updated `.docx` file path."""
+
+    json_data = await request.json()
+
+    file_path = json_data["file_path"]
+
+    file_path = copy_file(file_path)["copy_path"]
+
+    fix_format_mistakes(file_path, json_data)
+
+    return {"file_path": file_path}
