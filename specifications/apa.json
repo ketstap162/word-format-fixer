@@ -1,0 +1,83 @@
+{
+    "document": {
+        "layout": {
+            "top_margin": "2.54cm",
+            "bottom_margin": "2.54cm",
+            "left_margin": "3.17cm",
+            "right_margin": "3.17cm"
+        },
+        "styles": {
+            "Title": {
+                "font": {
+                    "name": "Times New Roman",
+                    "size": "12pt",
+                    "bold": true,
+                    "italic": false
+                },
+                "paragraph_format": {
+                    "alignment": 1,
+                    "space_before": "12pt",
+                    "space_after": "12pt",
+                    "line_spacing_rule": 2.0
+                }
+            },
+            "Heading 1": {
+                "font": {
+                    "name": "Times New Roman",
+                    "size": "14pt",
+                    "bold": true,
+                    "italic": false
+                },
+                "paragraph_format": {
+                    "alignment": 0,
+                    "space_before": "12pt",
+                    "space_after": "10pt",
+                    "line_spacing_rule": 2.0
+                }
+            },
+            "Heading 2": {
+                "font": {
+                    "name": "Times New Roman",
+                    "size": "12pt",
+                    "bold": true,
+                    "italic": false
+                },
+                "paragraph_format": {
+                    "alignment": 0,
+                    "space_before": "10pt",
+                    "space_after": "8pt",
+                    "line_spacing_rule": 2.0
+                }
+            },
+            "Heading 3": {
+                "font": {
+                    "name": "Times New Roman",
+                    "size": "11pt",
+                    "bold": true,
+                    "italic": false
+                },
+                "paragraph_format": {
+                    "alignment": 0,
+                    "space_before": "8pt",
+                    "space_after": "6pt",
+                    "line_spacing_rule": 2.0,
+                    "first_line_indent": "0.5in"
+                }
+            },
+            "Normal": {
+                "font": {
+                    "name": "Times New Roman",
+                    "size": "12pt",
+                    "bold": true,
+                    "italic": false
+                },
+                "paragraph_format": {
+                    "alignment": 0,
+                    "space_before": "0pt",
+                    "space_after": "0pt",
+                    "line_spacing_rule": 2.0
+                }
+            }
+        }
+    }
+}
