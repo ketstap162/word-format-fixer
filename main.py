@@ -22,6 +22,7 @@ async def upload_file(file: UploadFile = File(...), username: str = "none"):
 
 @app.get("/files/{username}")
 async def get_files(username: str):
+    """Get files list by username."""
     user_dir = os.path.join(UPLOAD_DIR, username)
 
     if not os.path.exists(user_dir):
