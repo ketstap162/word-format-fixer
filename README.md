@@ -51,4 +51,4 @@ http://127.0.0.1:8000/docs
 ### Time spent:
 - **11.11.2024** - 8 hours (Project structure and base features)
 - **12.11.2024** - 6 hours (The first prototype of the working application is ready)
-- **13.11.2024** - X hours (Optimization, code cleaning and reports)
+- **13.11.2024** - 1 hour (Optimization, code cleaning and reports)
